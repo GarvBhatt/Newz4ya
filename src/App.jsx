@@ -9,7 +9,6 @@ let App = () =>{
     const [isItTrueLeonard, setisItTrueLeonard] = useState(true);
     const [q, setq] = useState("taylor-swift");
     const [pageNo, setpageNo] = useState(1);
-
     return (
       <div>
         <Header />
