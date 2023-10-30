@@ -5,7 +5,7 @@ import Man_Sprinkler from "./Man_Sprinkler";
 let NewsBox = (props)=> {
     let Spiderman = async ()=>{
         props.setisItTrueLeonard(true);
-        let data=await fetch(`https://newsapi.org/v2/everything?q=${props.q}&apiKey=${import.meta.env.VITE_API_KEY}&page=${props.pageNo}&pageSize=8`);
+        let data=await fetch(`https://newsapi.org/v2/everything?q=${props.q}&apiKey=fb0df5c5423b4963ae3f9f1ce1351384&page=${props.pageNo}&pageSize=8`);
         let pdata=await data.json();
         props.setisItTrueLeonard(false);
         return pdata.articles;
