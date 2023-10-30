@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Container, Dropdown, Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Container, Navbar, Nav } from "react-bootstrap";
-import PropTypes from "prop-types";
 
 const Header = (props) => {
+  const [showDropdown, setshowDropdown] = useState(false);
+  const categories = ["General", "Business", "Entertainment", "Health", "Science", "Sports", "Technology"];
   const { title } = props;
 
   const headerStyle = {
-    backgroundColor: "silver",
+    backgroundColor: "rgb(210 210 210)",
     color: "#333",
-    padding: "15px",
+    padding: "7px",
     fontSize: "28px",
     fontWeight: "bold",
     display: "flex",
@@ -22,17 +23,16 @@ const Header = (props) => {
   };
 
   const navLinkStyle = {
-    fontSize: "20px",
+    fontSize: "21px",
     textDecoration: "none",
     color: "#333",
     transition: "color 0.3s",
-    marginLeft: "4.5em",
-    marginRight: "2em",
+    marginRight: "5.5em",
   };
 
   const logoStyle = {
     fontSize: "25px",
-    marginLeft: "1.5em",
+    marginLeft: "0.3em",
     marginRight: "14.25em",
   };
 
@@ -45,32 +45,64 @@ const Header = (props) => {
   };
 
   return (
-    <Navbar expand="lg" style={headerStyle}>
+    <Navbar className="fixed-top" expand="lg" style={headerStyle}>
       <Container>
         <Navbar.Brand to="/" style={logoStyle}>
-        <img width="31" height="31" src="https://img.icons8.com/fluency/48/sticky-notes.png" alt="sticky-notes"/>{title}
+        <img width="41" height="41" src="https://img.icons8.com/parakeet/48/news.png" alt="news"/>{title}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <a
+            <Link
               style={navLinkStyle}
-              href="/"
+              to="/"
               onMouseOver={onNavLinkHover}
               onMouseLeave={onNavLinkLeave}
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               style={navLinkStyle}
-              href="/about"
+              to="/about"
               onMouseOver={onNavLinkHover}
               onMouseLeave={onNavLinkLeave}
             >
               About
-            </a>
+            </Link>
           </Nav>
         </Navbar.Collapse>
+        <Dropdown show={showDropdown} onMouseEnter={() => setshowDropdown(true)} onMouseLeave={() => setshowDropdown(false)}>
+          <Dropdown.Toggle style={{fontSize:"19px",marginTop:"-11px"}} variant="success" id="dropdown-basic">
+            Category
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu className="m-0">
+            {
+              categories.map((e)=>
+              {
+                return (
+                  <Dropdown.Item
+                    key={e}
+                    style={{
+                      fontFamily: "Monospace",
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = "silver";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = "initial";
+                    }}
+                    onClick={() => {
+                      props.setq(e);
+                    }}
+                  >
+                    {e}
+                  </Dropdown.Item>
+                );
+              })
+            }
+          </Dropdown.Menu>
+        </Dropdown>
       </Container>
     </Navbar>
   );
