@@ -23,7 +23,7 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center" style={{marginBottom:"5px", marginTop:"135px"}}>
+    <div className="d-flex justify-content-center align-items-center" style={{marginLeft:"8px", marginBottom:"5px", marginTop:"135px"}}>
       <Row>
         <Col className="px-0" xs="auto">
           <Form.Control

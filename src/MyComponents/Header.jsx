@@ -32,7 +32,6 @@ const Header = (props) => {
 
   const logoStyle = {
     fontSize: "25px",
-    marginLeft: "0.3em",
     marginRight: "14.25em",
   };
 
