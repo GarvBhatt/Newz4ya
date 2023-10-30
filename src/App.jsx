@@ -20,7 +20,7 @@ let App = () =>{
         <Router>
           <Header title={" Newz4ya"} setq={setq}/>
           <Routes>
-            <Route path="/" element={
+            <Route path="/Newz4ya" element={
               <>
                 <SearchBar setisItTrueLeonard={setisItTrueLeonard} setq={setq}/>
                 <NewsBox isItTrueLeonard={isItTrueLeonard} q={q} setisItTrueLeonard={setisItTrueLeonard} pageNo={pageNo}/>
