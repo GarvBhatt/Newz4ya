@@ -23,7 +23,7 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center" style={{marginBottom:"5px", marginTop:"135px"}}>
+    <div className="d-flex justify-content-center align-items-center px-0" style={{marginBottom:"5px", marginTop:"135px"}}>
       <Row>
         <Col xs="auto">
           <Form.Control
@@ -36,7 +36,7 @@ const SearchBar = (props) => {
           />
         </Col>
         <Col xs="auto">
-          <Button style={{width:"95px"}} type="button" onClick={handleSearch}>
+          <Button className="px-0" style={{width:"95px"}} type="button" onClick={handleSearch}>
             Search
           </Button>
         </Col>
