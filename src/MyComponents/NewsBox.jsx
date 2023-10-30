@@ -1,14 +1,15 @@
 import NewsCard from "./NewsCard";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import Man_Sprinkler from "./Man_Sprinkler";
 
 let NewsBox = (props)=> {
+
     let Spiderman = async ()=>{
         props.setisItTrueLeonard(true);
-        let data=await fetch(`https://newsapi.org/v2/everything?q=${props.q}&apiKey=fb0df5c5423b4963ae3f9f1ce1351384&page=${props.pageNo}&pageSize=8`);
-        let pdata=await data.json();
+        const data = await axios.get(`https://newz4yapi.onrender.com/news?q=${props.q}&pageNo=${props.pageNo}`);
         props.setisItTrueLeonard(false);
-        return pdata.articles;
+        return data.data.response;
     }
 
     const [news, setnews] = useState([]);
