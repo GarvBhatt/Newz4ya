@@ -36,7 +36,7 @@ const SearchBar = (props) => {
           />
         </Col>
         <Col className="px-2" xs="auto">
-          <Button style={{width:"87px"}} type="button" onClick={handleSearch}>
+          <Button style={{width:"81px"}} type="button" onClick={handleSearch}>
             Search
           </Button>
         </Col>
