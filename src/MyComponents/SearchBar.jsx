@@ -17,17 +17,18 @@ const SearchBar = (props) => {
 
   const handleKeyPress = (e) => {
     if (e.code === "Enter") {
+      props.setq(tempInput);
       handleSearch(e);
     }
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center" style={{marginBottom:"5px", marginTop:"115px"}}>
+    <div className="d-flex justify-content-center align-items-center" style={{marginBottom:"5px", marginTop:"135px"}}>
       <Row>
         <Col xs="auto">
           <Form.Control
             type="text"
-            style={{border:"inset black 1px",width:"275px"}}
+            style={{border:"inset black 1px",width:"301px"}}
             onChange={inputHandler}
             onKeyDown={handleKeyPress}
             placeholder="Enter any keyword"
@@ -35,7 +36,7 @@ const SearchBar = (props) => {
           />
         </Col>
         <Col xs="auto">
-          <Button style={{width:"101px"}} type="button" onClick={handleSearch}>
+          <Button style={{width:"95px"}} type="button" onClick={handleSearch}>
             Search
           </Button>
         </Col>
