@@ -7,7 +7,7 @@ const PageNavigation = (props) =>{
         
         <div>
           {/* {props.pageNo>2 && <Button className="btn-lg my-4 mx-2" variant="dark" type="button" onClick={()=>{props.setpageNo(props.pageNo-2);props.setisItTrueLeonard(true)}}>{props.pageNo-2}</Button>} */}
-          {props.pageNo>1 && <Button className="btn-lg my-4 mx-2" variant="dark" type="button" onClick={()=>{props.setpageNo(props.pageNo-1);props.setisItTrueLeonard(true)}}>{props.pageNo-1}</Button>}
+          {/* {props.pageNo>1 && <Button className="btn-lg my-4 mx-2" variant="dark" type="button" onClick={()=>{props.setpageNo(props.pageNo-1);props.setisItTrueLeonard(true)}}>{props.pageNo-1}</Button>} */}
           <Button className="btn-lg my-4 mx-2 page-item active" variant="dark" type="button">{props.pageNo}</Button>
           {props.pageNo<12 && <Button className="btn-lg my-4 mx-2" variant="dark" type="button" onClick={()=>{props.setpageNo(props.pageNo+1);props.setisItTrueLeonard(true)}}>{props.pageNo+1}</Button>}
           {/* {props.pageNo<11 && <Button className="btn-lg my-4 mx-2" variant="dark" type="button" onClick={()=>{props.setpageNo(props.pageNo+2);props.setisItTrueLeonard(true)}}>{props.pageNo+2}</Button>} */}
