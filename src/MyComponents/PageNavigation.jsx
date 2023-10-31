@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import "./pageNav.css";
+import "../style/style.css";
 
 const PageNavigation = (props) =>{
     return(
