@@ -1,11 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faTwitter,
-  faInstagram,
-  faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
 
 const footerStyle = {
   position: "relative",
@@ -65,7 +58,6 @@ const Footer = () => (
             <li>
               <a href="#!" className="text-white" rel="noopener noreferrer">
                 <span style={{ paddingRight: "5px" }}>
-                  <FontAwesomeIcon icon={faFacebookF} />
                 </span>{" "}
                 Facebook
               </a>
@@ -73,7 +65,6 @@ const Footer = () => (
             <li>
               <a href="#!" className="text-white" rel="noopener noreferrer">
                 <span style={{ paddingRight: "5px" }}>
-                  <FontAwesomeIcon icon={faInstagram} />
                 </span>{" "}
                 Instagram
               </a>
@@ -81,7 +72,6 @@ const Footer = () => (
             <li>
               <a href="#!" className="text-white" rel="noopener noreferrer">
                 <span style={{ paddingRight: "5px" }}>
-                  <FontAwesomeIcon icon={faTwitter} />
                 </span>{" "}
                 Twitter
               </a>
@@ -89,7 +79,6 @@ const Footer = () => (
             <li>
               <a href="#!" className="text-white" rel="noopener noreferrer">
                 <span style={{ paddingRight: "5px" }}>
-                  <FontAwesomeIcon icon={faPinterest} />
                 </span>{" "}
                 Pinterest
               </a>
