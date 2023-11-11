@@ -54,7 +54,7 @@ const Header = (props) => {
           <Nav className="ml-auto">
             <Link
               style={navLinkStyle}
-              to="/"
+              to="/Newz4ya/"
               onMouseOver={onNavLinkHover}
               onMouseLeave={onNavLinkLeave}
             >
